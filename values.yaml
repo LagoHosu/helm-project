@@ -44,11 +44,11 @@ serviceAccounts:
       eks.amazonaws.com/role-arn: arn:aws:iam::914296864199:role/AmazonEKSExternalDNSRole
   albController:
     create: true
-    name: aws-load-balancer-controller-helm
+    name: aws-load-balancer-controller
     namespace: kube-system
     labels:
       app.kubernetes.io/component: controller
-      app.kubernetes.io/name: aws-load-balancer-controller-helm
+      app.kubernetes.io/name: aws-load-balancer-controller
     annotations:
       eks.amazonaws.com/role-arn: arn:aws:iam::914296864199:role/AmazonEKSLoadBalancerControllerRole
   secretAccess:
