@@ -38,7 +38,7 @@ serviceAccount:
 serviceAccounts:
   externalDNS:
     create: true
-    name: external-dns-helm
+    name: external-dns
     namespace: kube-system
     annotations:
       eks.amazonaws.com/role-arn: arn:aws:iam::914296864199:role/AmazonEKSExternalDNSRole
