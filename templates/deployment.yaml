@@ -33,7 +33,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 
-          # ✅ 환경 변수: Secrets Manager 연동
+          ✅ 환경 변수: Secrets Manager 연동
           envFrom:
             - secretRef:
                 name: django-settings-secrets
@@ -76,6 +76,8 @@ spec:
             readOnly: true
             volumeAttributes:
               secretProviderClass: django-settings-secrets
+              # secretProviderClass: "django-settings-secrets"
+
 
       # ✅ (옵션) 노드 설정 등
       {{- with .Values.nodeSelector }}
